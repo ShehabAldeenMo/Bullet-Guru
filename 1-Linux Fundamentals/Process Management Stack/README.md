@@ -8,14 +8,17 @@ We will dicuss some questions and answers on them. <br />
 It uses to kill some process or send notification to another process _Not Preferred to use in interacting between processes_ .<br />
     
 + What are the types of signals ?<br />
-Two types are: Core - Term - Stop - Continue ... etc. You can know the most of this signals types from url "https://man7.org/linux/man-pages/man7/signal.7.html".<br />
+They are: Core - Term - Stop - Continue ... etc.<br />
+You can know the most of this signals types from url "https://man7.org/linux/man-pages/man7/signal.7.html".<br />
 The most common types are core and term and they are used to kill some process but with different scenario.<br />
-Core:- make two steps <br />
-1) Out core dump file which is a snapshot of process's state before termination.<br />
-2) Terminate this process.<br />
+<br />
+Core:- make two steps
+**1.** Out core dump file which is a snapshot of process's state before termination.<br />
+**2.** Terminate this process.<br />
+  <br />
 Term:- Terminate this process only. <br />
     
-+ What are the types of termination ?<br />
++ What are the types of termination ?
 1) Direct Termination.   2) Handler Excutation then terminate.<br />
 
 + What are the core-dump file ?<br />
