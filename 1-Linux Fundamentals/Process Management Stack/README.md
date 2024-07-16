@@ -11,15 +11,13 @@ It uses to kill some process or send notification to another process _Not Prefer
 They are: Core - Term - Stop - Continue ... etc.<br />
 You can know the most of this signals types from url "https://man7.org/linux/man-pages/man7/signal.7.html".<br />
 The most common types are core and term and they are used to kill some process but with different scenario.<br />
-<br />
-Core:- make two steps
-**1.** Out core dump file which is a snapshot of process's state before termination.<br />
-**2.** Terminate this process.<br />
-  <br />
+1.Core:- make two steps
+ 1.1. Out core dump file which is a snapshot of process's state before termination.<br />
+ 1.2. Terminate this process.<br />
 Term:- Terminate this process only. <br />
-    
+ <br />
 + What are the types of termination ?
-1) Direct Termination.   2) Handler Excutation then terminate.<br />
+1) Direct Termination.   2. Handler Excutation then terminate.<br />
 
 + What are the core-dump file ?<br />
 They help developers understand why a program crashed by providing a snapshot of the process's state at the time of the crash. contains the memory contents of the process (stack, heap, and data segments), register states, and other information that reflects the state of the process at the time of the crash. <br />
