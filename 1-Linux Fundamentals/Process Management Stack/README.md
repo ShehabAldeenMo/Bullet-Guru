@@ -62,7 +62,35 @@ Generate **process.o** from **main.cpp** . This progam used to make " Hello from
     
 ![Screenshot from 2024-07-16 16-49-37](https://github.com/user-attachments/assets/6f0b73cb-f87c-4668-bd63-423367b1b352)
 
+## Task2 (pratice)
++ Check how many cores do you have using top command.
 
+    $ top
+    $ prees 1
+
+![Screenshot from 2024-07-16 17-51-55](https://github.com/user-attachments/assets/77df91dd-2bec-4ec0-8907-b9d70f3a19c9)
+
++ Create number of cores + 2 processes dd if=/dev/zero of=/dev/null run in background.
+
+    $ dd if=/dev/zero of=/dev/null
+    $ ctrl+z to pause it
+    $ bg %1
+
+![Screenshot from 2024-07-16 17-56-45](https://github.com/user-attachments/assets/1a1108d7-1612-4965-acc5-cae312f4ef61)
+  
++ Change priority for them: 
+-20, -10, 0, .. , 19 <br />
+  and  Monitor them using top command, did you notice any change ?
+
+
+    $ sudo renice -20 -p 9817
+    $ top
+
+![Screenshot from 2024-07-16 18-00-26](https://github.com/user-attachments/assets/0ee329b8-20db-4fc7-b68b-ef328eacdd01)
+
++ Kill them all using killall command.
+
+      $ killall dd 
 
 
     
