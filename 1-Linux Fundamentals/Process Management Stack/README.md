@@ -64,8 +64,9 @@ Generate **process.o** from **main.cpp** . This progam used to make " Hello from
 
 ## Task2 (pratice)
 + Check how many cores do you have using top command.
-    $ top
-    $ 1
+
+    $ ls
+    $ gdb ./process core.process.8337.1721137316
 
 ![Screenshot from 2024-07-16 17-51-55](https://github.com/user-attachments/assets/77df91dd-2bec-4ec0-8907-b9d70f3a19c9)
 
