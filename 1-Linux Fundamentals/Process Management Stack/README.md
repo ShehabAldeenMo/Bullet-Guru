@@ -17,8 +17,9 @@ The most common types are core and term and they are used to kill some process b
 Term:- Terminate this process only. <br />
  <br />
  
-+ What are the types of termination ?  <br />
-1) Direct Termination.   2) Handler Excutation then terminate.<br />
++ What are the types of termination ? 
+1) Direct Termination.
+2) Handler Excutation then terminate.<br />
 
 + What are the core-dump file ?<br />
 They help developers understand why a program crashed by providing a snapshot of the process's state at the time of the crash. contains the memory contents of the process (stack, heap, and data segments), register states, and other information that reflects the state of the process at the time of the crash. <br />
