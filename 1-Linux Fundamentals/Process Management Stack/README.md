@@ -50,7 +50,7 @@ Generate **process.o** from **main.cpp** . This progam used to make " Hello from
    
    ```
     $ q
-    $ kill -ABRT **6082**
+    $ kill -ABRT 6082
    ```
 
 ![Screenshot from 2024-07-16 15-43-34](https://github.com/user-attachments/assets/23bf1327-f7b2-45f2-93b9-98f7cb6f1594)
