@@ -74,9 +74,9 @@ Generate **process.o** from **main.cpp** . This progam used to make " Hello from
 
 + Create number of cores + 2 processes dd if=/dev/zero of=/dev/null run in background.
 ```
-    $ dd if=/dev/zero of=/dev/null<br />
-    $ ctrl+z to pause it<br />
-    $ bg %1 <br />
+    $ dd if=/dev/zero of=/dev/null
+    $ ctrl+z to pause it
+    $ bg %1 
 ```
 ![Screenshot from 2024-07-16 17-56-45](https://github.com/user-attachments/assets/1a1108d7-1612-4965-acc5-cae312f4ef61)
   
@@ -84,8 +84,8 @@ Generate **process.o** from **main.cpp** . This progam used to make " Hello from
 -20, -10, 0, .. , 19 <br />
   and  Monitor them using top command, did you notice any change ?
 ```
-    $ sudo renice -20 -p 9817 <br />
-    $ top <br />
+    $ sudo renice -20 -p 9817 
+    $ top
 ```
 ![Screenshot from 2024-07-16 18-00-26](https://github.com/user-attachments/assets/0ee329b8-20db-4fc7-b68b-ef328eacdd01)
 
