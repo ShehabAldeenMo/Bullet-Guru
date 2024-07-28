@@ -15,7 +15,7 @@ The most common types are core and term and they are used to kill some process b
  1.1. Out core dump file which is a snapshot of process's state before termination.<br />
  1.2. Terminate this process.<br />
 Term:- Terminate this process only. <br />
- <br />
+ <br /> 
  
 + What are the types of termination ? 
 1) Direct Termination.
