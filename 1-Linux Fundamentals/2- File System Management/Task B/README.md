@@ -51,6 +51,7 @@ sdb      8:16   1   7.7G  0 disk
 
 9. Reboot your PC leads to unmount each parition.
 10. `Automatic Mounting`
+    
     10.1 Get info about each parition
     ```
     blkid
@@ -72,4 +73,5 @@ sdb      8:16   1   7.7G  0 disk
     sudo mount -a
     ```
 
-    10.5 If you reboot this PC, Nothing will change.
+> !Note
+> If you reboot this PC, Nothing will change.
