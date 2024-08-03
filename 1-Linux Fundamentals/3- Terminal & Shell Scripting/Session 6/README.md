@@ -40,7 +40,9 @@ Because you need to make it as executable using this command `chmod +x path/of/f
 + Inputs
 + Operations
 + Outputs
-  
+
+------------------------------------------------------------------------------------------------------------------
+
 1. Inputs
   + At first: we will discuss about who could make these inputs (Developer, Script, Service Management).
   + Secondary: Types of inputs are (local-env-shell).
