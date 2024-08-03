@@ -31,6 +31,8 @@ bash
 ```
 try to access this variables and you will find what we mean.
 
+------------------------------------------------------------------------------------------------------------------
+
 + how can we find the relations between these series ?
 use `pstree` we will find
 ```
@@ -105,4 +107,21 @@ By write this variable using alias or env in .bashrc. Now we will illustrate how
 ─── ─── ───                         ─── ─── ─── ─── ───                        ─── ─── ─── 
 ```
 
-After it the previous loading, Bash is ready to get any command from you and ask you if it is an external command will  search into $PATH then run it or built-in command.
+After it the previous loading, Bash is ready to get any command from you and ask you if it is an external command will  search into `$PATH` then run it or built-in command.
+
+So if we can define env or alias variable in bashrc or any file included into bashrc , we will be able to use it in any created bash.
+
+
+------------------------------------------------------------------------------------------------------------------
+
++ How to edit in bashrc ?
+step(1): `vim ~/.bashrc` and make alias or env.
+step(2): `source ~/.bashrc` to read bashrc into runtime, if changed during runtime.
+
+now you can use any `shortcut` or defined variable with every new load of this file
+
+
+
+
+
+ 
