@@ -75,6 +75,9 @@ hold input till user enter it using read.
 
 ------------------------------------------------------------------------------------------------------------------
 
++ Enviroment variables could be accessed, assigned, deleted, print all env.
+
+------------------------------------------------------------------------------------------------------------------
 
 3. Outputs (In next Session)
    + A. exit
