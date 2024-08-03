@@ -10,13 +10,13 @@ A terminal, also known as a command-line interface (CLI), is a text-based interf
 Name="Shehab"
 echo $Name
 ```
---> local variable means that it defines for the current bash only. And we can't use it we its childern.
+local variable means that it defines for the current bash only. And we can't use it we its childern.
 
 + How to define global variable ?
 ```
 export Name="ShehabAldeen"
 ```
---> global variable means that it defines for the current bash and its childern. 
+global variable means that it defines for the current bash and its childern. 
 
 > Note
 > This is not a permanent variable so you need to define it each time that you want to use.
@@ -25,7 +25,7 @@ export Name="ShehabAldeen"
 ```
 bash
 ```
---> try to access this variables and you will find what we mean.
+try to access this variables and you will find what we mean.
 
 + how can we find the relations between these series ?
 use `pstree` we will find
@@ -44,7 +44,7 @@ alias is used to define local variable only. And we can use it to get the conten
 alias Disk_Partition="df -h"
 Disk_Partition
 ```
---> if we create any child from this bash we won't access Disk_Partition.
+if we create any child from this bash we won't access Disk_Partition.
 
 + Very Important question, Why don't we use $ to use access local env variable ?
 In Bash scripting, the `$` symbol is used to reference the value of a variable. This is necessary to distinguish between the variable name and its value. On the other hand, aliases do not require the $ symbol because they are simply command shortcuts and not variables.
@@ -53,13 +53,13 @@ In Bash scripting, the `$` symbol is used to reference the value of a variable. 
 Disk="df -h"
 Disk
 ```
---> In This usage, Disk will not be resolved and bash will say `Disk: command not found` because there's no command with this name. Then, if we say, we will use `echo Disk`. That will print our text only without running it. What about we will use `$Disk`. In this case, Derefence Disk with `df -h` and print disk partitions as we want.
+In This usage, Disk will not be resolved and bash will say `Disk: command not found` because there's no command with this name. Then, if we say, we will use `echo Disk`. That will print our text only without running it. What about we will use `$Disk`. In this case, Derefence Disk with `df -h` and print disk partitions as we want.
 
 ```
 alias Disk_Partition="df -h"
 Disk_Partition
 ```
---> we don't need to derefernce or something like this case. Becuase it is regarded as shortcut of command and run it directly.
+we don't need to derefernce or something like this case. Becuase it is regarded as shortcut of command and run it directly.
 
 + How to append some path for env PATH to make bash search about we want in this path also.
 ```
@@ -76,7 +76,7 @@ Bash search sequentially in &PATH. When it find the want program, It will exit f
 ```
 unset Name
 ```
---> Try to reuse it. you will find nothing.
+Try to reuse it. you will find nothing.
 
 + How to define variables permanent on files ?
 By write this variable using alias or env in .bashrc. Now we will illustrate how to terminal run.
