@@ -21,10 +21,10 @@ Shell scripting is a way to automate tasks and manage systems by writing a seque
 
 ## Questions
 
-+ What is the shebang ?
++ What is the shebang ?<br />
 The shebang (`#!`) in shell scripting is used to specify the interpreter that should be used to execute the script. When a script starts with a shebang, the operating system uses the specified interpreter to run the script. This ensures that the script is executed in the correct environment with the appropriate interpreter.
 
-Examples :-
+Examples :-<br />
 1. `#!/bin/bash` to run into bash environment and use its syntex and definations.
 2. `#!/usr/bin/env python3` to run into python environment and use its syntex and definations.
 
@@ -32,18 +32,18 @@ It allows you to run the script directly without specifying the interpreter manu
 
 ------------------------------------------------------------------------------------------------------------------
 
-+ If I tried to run it, why can't be runned ?
++ If I tried to run it, why can't be runned ?<br />
 Because you need to make it as executable using this command `chmod +x path/of/file/name.sh`
 
 ------------------------------------------------------------------------------------------------------------------
-**Structure of Bash Scripting**
+**Structure of Bash Scripting**<br />
 + Inputs
 + Operations
 + Outputs
 
 ------------------------------------------------------------------------------------------------------------------
 
-1. Inputs
+1. Inputs<br />
   + At first: we will discuss about who could make these inputs (Developer, Script, Service Management).
   + Secondary: Types of inputs are (local-env-shell).
   + We can make this inputs by two cases : a. Before run script, b. After run operation "During run-time". We make an example on each case into `01_bash_basics.sh`
@@ -57,7 +57,7 @@ hold input till user enter it using read.
 ------------------------------------------------------------------------------------------------------------------
 
 
-2. Operations on variables (We make an example on each case into `01_bash_basics.sh`).
+2. Operations on variables (We make an example on each case into `01_bash_basics.sh`).<br />
    + A. On Local Variables
      + a. Declare variable `tldr declare` will show the types of variables that could be declared.
      + b. Assign value variable
@@ -79,7 +79,7 @@ hold input till user enter it using read.
 
 ------------------------------------------------------------------------------------------------------------------
 
-3. Outputs (In next Session)
+3. Outputs (In next Session)<br />
    + A. exit
    + B. print on screen by echo or printf
 
