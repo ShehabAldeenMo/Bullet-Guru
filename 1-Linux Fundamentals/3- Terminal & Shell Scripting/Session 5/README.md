@@ -12,6 +12,8 @@ echo $Name
 ```
 local variable means that it defines for the current bash only. And we can't use it we its childern.
 
+------------------------------------------------------------------------------------------------------------------
+
 + How to define global variable ?
 ```
 export Name="ShehabAldeen"
@@ -20,6 +22,8 @@ global variable means that it defines for the current bash and its childern.
 
 > Note
 > This is not a permanent variable so you need to define it each time that you want to use.
+
+------------------------------------------------------------------------------------------------------------------
 
 + How can we test this sencerio ?
 ```
@@ -38,6 +42,8 @@ use `pstree` we will find
 
 ```
 
+------------------------------------------------------------------------------------------------------------------
+
 + What are alias ?
 alias is used to define local variable only. And we can use it to get the content of variables without `$` to use it.
 ```
@@ -45,6 +51,8 @@ alias Disk_Partition="df -h"
 Disk_Partition
 ```
 if we create any child from this bash we won't access Disk_Partition.
+
+------------------------------------------------------------------------------------------------------------------
 
 + Very Important question, Why don't we use $ to use access local env variable ?
 In Bash scripting, the `$` symbol is used to reference the value of a variable. This is necessary to distinguish between the variable name and its value. On the other hand, aliases do not require the $ symbol because they are simply command shortcuts and not variables.
@@ -61,6 +69,9 @@ Disk_Partition
 ```
 we don't need to derefernce or something like this case. Becuase it is regarded as shortcut of command and run it directly.
 
+
+------------------------------------------------------------------------------------------------------------------
+
 + How to append some path for env PATH to make bash search about we want in this path also.
 ```
 PATH=$PATH:"/path/of/folder"
@@ -68,15 +79,21 @@ PATH=$PATH:"/path/of/folder"
 PATH="/path/of/folder":$PATH
 ```
 
+------------------------------------------------------------------------------------------------------------------
+
 + what the difference between the previous sentances ?
 Bash search sequentially in &PATH. When it find the want program, It will exit from searching algprithim and print run this file.
 
+
+------------------------------------------------------------------------------------------------------------------
 
 + How delete some variable global or local that you created ?
 ```
 unset Name
 ```
 Try to reuse it. you will find nothing.
+
+------------------------------------------------------------------------------------------------------------------
 
 + How to define variables permanent on files ?
 By write this variable using alias or env in .bashrc. Now we will illustrate how to terminal run.
