@@ -58,7 +58,7 @@ hold input till user enter it using read.
 
 
 2. Operations on variables (We make an example on each case into `01_bash_basics.sh`).<br />
-   + A. On Local Variables
+  + A. On Local Variables
      + a. Declare variable `tldr declare` will show the types of variables that could be declared.
      + b. Assign value variable
      + c. Access Variable
@@ -67,11 +67,11 @@ hold input till user enter it using read.
   + B. Functions
   + C. Aritimitic Operations
   + D. Check Conditions (use tldr test):- 
-      + a. Checking if a File Exists
-      + b. Checking if a Variable is Empty
-      + c. Checking if a String Equals Another String
-      + d. Checking Numeric Conditions
-      + e. case
+     + a. Checking if a File Exists
+     + b. Checking if a Variable is Empty
+     + c. Checking if a String Equals Another String
+     + d. Checking Numeric Conditions
+     + e. case
 
 ------------------------------------------------------------------------------------------------------------------
 
