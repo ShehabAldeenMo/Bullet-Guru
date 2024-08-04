@@ -20,11 +20,11 @@
      + while
    c. case (Done in session 6)
    d. select
-4. Processing files
-   a. using for loop
-   d. using while loop
-   c. write on
-   d. extract information file.
+4. Processing files <br />
+   a. using for loop <br />
+   d. using while loop <br />
+   c. write on <br />
+   d. extract information file. <br />
 
 
 
