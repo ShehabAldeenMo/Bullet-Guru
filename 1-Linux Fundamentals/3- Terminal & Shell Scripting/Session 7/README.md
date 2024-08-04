@@ -13,7 +13,18 @@
      + Extract
         + Extract from the beg.
         + Extract from the end.
-
+3. Flow Control
+   a. if else (Done in session 6) 
+   b. Loops
+     + for
+     + while
+   c. case (Done in session 6)
+   d. select
+4. Processing files
+   a. using for loop
+   d. using while loop
+   c. write on
+   d. extract information file.
 
 
 
