@@ -13,17 +13,17 @@
    a. check string [-n,-z]<br />
    b. Sub-string operation<br />
    c. Matching Patterns <br />
-      Searching pattern inside string.
-       Extract <br /> 
-          Extract from the beg. <br /> 
-          Extract from the end. <br /> 
+      + Searching pattern inside string.
+      + Extract <br /> 
+         + Extract from the beg. <br /> 
+         + Extract from the end. <br /> 
    d. Trim. <br /> 
    
 3. Flow Control <br /> 
    a. if else (Done in session 6)  <br />
    b. Loops <br /> 
-      for <br /> 
-       while <br /> 
+      + for <br /> 
+      + while <br /> 
    c. case (Done in session 6) <br /> 
    d. select <br /> <br />
    
