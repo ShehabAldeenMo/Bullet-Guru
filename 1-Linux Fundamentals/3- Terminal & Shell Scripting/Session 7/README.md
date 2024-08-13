@@ -1,16 +1,16 @@
 # Shell Scripting
 
 ## Questions
-1. Advanced Variable Operations <br />
-   a. echo "${NAME:-Shehab}" :<br />
+1. `Advanced Variable Operations`
+   a. `echo "${NAME:-Shehab}"`
    If variable is empty,Will fill with Shehab. Otherwise, we still as the same. This usage provides a way to use a       default value without modifying the original variable and store into. Otherwise, we still as the same.<br />
-   b. echo "${NAME:=Hazem}" : <br />
+   b. `echo "${NAME:=Hazem}" :` <br />
    If variable is undefined, Will define and store into. Otherwise, we still as the same.<br />
-   c. echo "${NAME:?Hazem}" : <br />
+   c. `echo "${NAME:?Hazem}" :` <br />
    To raise an error if the variable is not declared.<br />
 2. Advanced string Operations<br />
    a. check string [-n,-z] <br />
-   b. Sub-string operation <br />
+   b. Sub-string operation<br />
    c. Matching Patterns <br />
      + Searching pattern inside string. <br />
      + Extract <br />
