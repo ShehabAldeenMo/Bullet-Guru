@@ -1,7 +1,7 @@
 # Shell Scripting
 
 ## Questions
-1. `Advanced Variable Operations <br />
+1. Advanced Variable Operations <br />
    a. echo "${NAME:-Shehab}" <br />
    If variable is empty,Will fill with Shehab. Otherwise, we still as the same. This usage provides a way to use a       default value without modifying the original variable and store into. Otherwise, we still as the same.<br />    
    b. `echo "${NAME:=Hazem}" :` <br />
