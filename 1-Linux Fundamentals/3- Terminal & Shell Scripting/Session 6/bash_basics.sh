@@ -13,7 +13,7 @@ echo "Hello, $first_name $last_name!"
 
 #1.b
 echo "Enter your first name and last name:" # Prompt the user for input
-read first_name last_name
+read -r first_name last_name
 
 # Use the input
 echo "Hello, $first_name $last_name!"
@@ -21,7 +21,7 @@ echo "Hello, $first_name $last_name!"
 echo "-----------------------------------------------------------------------------------"
 
 ####################################### 1. Operations ############################################
-# 2.A.a and 2.A.c
+# 2.A.a and 2.A.c          (On Local Variables)
 declare Name="Shehab Aldeen Mohammed"
 echo "My name : $Name"
 
@@ -38,14 +38,13 @@ echo "$Value"
 echo "-----------------------------------------------------------------------------------"
 
 # B. Functions 
-declare NAME=`hostname`   # Assign value from another command
+declare NAME="hostname"   # Assign value from another command. where hostname is a command call that print your name
 echo ${NAME}
 
 file_list=$(ls)           # specific commands
 echo "Files in the directory are: $file_list"
 
-
-pstree                   # command
+pstree                   # command call
 
 # each runing command return status of this call by $?
 # which 0 ----> sucess or !0 ----> failed
@@ -117,7 +116,7 @@ else
     echo "$num1 is not less than $num2."
 fi
 
-# D.e.
+# D.e.   switch case
 day="Shehab"
 
 case "$day" in
@@ -150,7 +149,3 @@ echo ${ENV_NAME}
 unset ENV_NAME
 # 5. Print all ENV system.
 env 
-
-
-
-
