@@ -10,14 +10,14 @@
    To raise an error if the variable is not declared.<br /> <br />
    
 2. Advanced string Operations
-   a. check string [-n,-z]
-   b. Sub-string operation
-   c. Matching Patterns 
+   a. check string [-n,-z]<br />
+   b. Sub-string operation<br />
+   c. Matching Patterns <br />
      + Searching pattern inside string.
-     + Extract <br /> <br />
+     + Extract <br /> 
         + Extract from the beg. <br /> 
         + Extract from the end. <br /> 
-   d. Trim <br /> <br />
+   d. Trim <br /> 
    
 3. Flow Control <br /> 
    a. if else (Done in session 6)  <br />
