@@ -6,7 +6,7 @@ function trace_on(){
     set -x 
 }
 
-# This command disables debugging, stopping the trace of subsequent commands.
+# This command disables debugging, stopping the trace of subsequent commands. 
 function trace_off(){
     set +x 
 }

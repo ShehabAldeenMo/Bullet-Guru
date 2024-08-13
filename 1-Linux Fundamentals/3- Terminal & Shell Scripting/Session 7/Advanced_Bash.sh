@@ -266,7 +266,7 @@ echo "String returned by returnString: ${RET}"
 ########################################### Special syntax #################################
 
 # 1. Pipe (|) ---> syntax: command1 | command2
-# Example: Passing the output of one command as input to another.
+# Example: Passing the output of one command as input to another. 
 echo "Testing .. " | grep "Test"
 
 # 2. && ---> Syntax: command1 && command2
