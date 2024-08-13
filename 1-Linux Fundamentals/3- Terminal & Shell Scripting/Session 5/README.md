@@ -114,11 +114,11 @@ So if we can define env or alias variable in bashrc or any file included into ba
 
 ------------------------------------------------------------------------------------------------------------------
 
-+ How to edit in bashrc ?
-step(1): `vim ~/.bashrc` and make alias or env.
-step(2): `source ~/.bashrc` to read bashrc into runtime, if changed during runtime.
++ How to edit in bashrc ?<br />
+step(1): `vim ~/.bashrc` and make alias or env.<br />
+step(2): `source ~/.bashrc` to read bashrc into runtime, if changed during runtime.<br />
 
-now you can use any `shortcut` or defined variable with every new load of this file
+now you can use any `shortcut` or defined variable with every new load of this file<br />
 
 
 
