@@ -1,7 +1,7 @@
 #! /usr/bin/bash
 
 
-############################### Advanced Variable Operations. ###############################
+############################### 1. Advanced Variable Operations. ###############################
 NAME="Shehab"
 
 echo "${NAME:-Hazem}"  # variable is empty        ---> NAME="Hazem" (* YOCTO)
@@ -11,8 +11,8 @@ echo "${NAME:=Hazem}"  # variable is not defined  ---> 1. define variable. then 
 
 
 
-################################ Advanced string Operations. ################################
-# 1. check string  ---> empty, declared, string1 = string2 (DONE in previous session)
+################################ 2. Advanced string Operations. ################################
+# a. check string  ---> empty, declared, string1 = string2 (DONE in previous session)
 ##  -n to check if is not empty
 unset NAME
 
@@ -31,14 +31,15 @@ fi
 
 #----------------------------------------------------------------------------------------#
 
-# 2. Sub-string operation.
+# b. Sub-string operation.
 declare string="Hello world"
-echo "${string:3}"       # cutting operation : cut first 3 chars.
-echo "${string:-3}"      # cutting operation : get last 3 chars.
+echo "${string:  3}"       # cutting operation : cut first 3 chars. Outputs: "lo world"
+echo "${string: -3}"       # cutting operation : get last 3 chars.  Outputs: "rld"
 
 #----------------------------------------------------------------------------------------#
 
-# 3. Matching Pattern ---> 
+# c. Matching Pattern ---> 
+
 ## Searching pattern inside string.
 declare data="Hello world"
 if [[ "${data}" = *"Wold"* ]]; then
@@ -60,17 +61,22 @@ declare filename="Hello.txt"
     declare extension=${filename##*.}
     echo "${extension}"
 
+#----------------------------------------------------------------------------------------#
 
-################################### Flow Control. ######################################
-# if else Done before
+## d. Trim
+declare string="       Hello world  " 
+echo "Before trim: ${string}"
+trimmed=$(echo -e "${string}" | tr -d '[:space:]')
+echo "$trimmed"
 
-# Loops 
+################################### 3. Flow Control. ######################################
+# a. if else Done before
+
+# b. Loops 
 ### for
 for i in `seq 10`;do  # we replaced `seq 10` with $(seq 10))
     echo "${i}"
 done
-
-#----------------------------------------------------------------------------------------#
 
 ## while 
 index=1
@@ -79,10 +85,13 @@ while [ $index -le $end ]; do
     echo "${index}"
     ((index++))
 done
+#----------------------------------------------------------------------------------------#
+
+# c. case (Done in session 6)
 
 #----------------------------------------------------------------------------------------#
 
-## select loop
+# d. select loop
 select os in "linux" "windows"; do
     if [[ "${os}" == "linux" ]]; then
         echo "Linux operations"
@@ -97,13 +106,11 @@ done
 
 ###################################### Processing Files #####################################
 
-ls | while read -r filename; do
-    echo "${filename}"
-done
-
 # ${#files[@]}: This is an expression that evaluates to the length of the array files. 
 # Specifically, `#` is used to get the number of elements in the array, and files[@] refers to all elements of the files array.
 # Loop over filenames using a wildcard (*) with a `while` loop
+
+# a. using while loop
 echo "Using wildcard and array:"
 files=(*)
 index=0
@@ -112,8 +119,15 @@ while [ $index -lt ${#files[@]} ]; do
     ((index++))
 done
 
+# or
+
+ls | while read -r filename; do
+    echo "${filename}"
+done
+
 #----------------------------------------------------------------------------------------#
 
+# b. using for loop
 for filename in `ls`; do # Backticks `` execute the command inside them and return the output. we can replace it with $(ls) better
     echo "${filename}"   # In this case, ls is executed, and the filenames are returned as a space-separated list.
 done
@@ -124,17 +138,18 @@ done
 
 #----------------------------------------------------------------------------------------#
 
-# 2.1: overwrite.
+# c. write on 
+## 2.1: overwrite.
     echo "linux"  > "./test.txt" # overwrite.
-# 2.2: Append
+## 2.2: Append
     echo "Windows" >> "./test.txt" # Append.
 
 #----------------------------------------------------------------------------------------#
 
-# 3. extract information file.
-# 1. open file.
-# 2. read file.
-# 3. extract.
+# d. extract information file.
+## 1. open file.
+## 2. read file.
+## 3. extract.
 
 # Check if the file is provided as an argument
 if [ -z "$1" ]; then
@@ -149,11 +164,120 @@ while IFS= read -r line; do
     echo "${os}"
 done < "$1"
 
+# e. source files 
+source ./tracing_functions.sh
+
+trace_on
+for i in `seq 10`;do  # we replaced `seq 10` with $(seq 10))
+    echo "${i}"
+done
+trace_off
+
+####################################### Debugging ###########################################
+#    a. error handling (terminate script on any command failure)
+#    b. error on undefined variables (terminate script if an undefined variable is accessed) set -u
+#    c. tracing (print each command before executing it)
+
+set -e # Activate error handling (terminate script on any command failure)
+set -x # Activate tracing (print each command before executing it)
+set -u # Activate error on undefined variables (terminate script if an undefined variable is accessed)
+
+echo "-------- Debugging ----------"
+
+# This command is undefined and will raise an error
+# shehab             ### Note: I comment it to test the next lines because code termoinate with error (-e) 
+
+echo "Right Command 1...... "
+echo "Right Command 2...... "
+
+set +e # Deactivate error handling for demonstration purposes
+
+echo "Right Command 3  ...... "
+
+eco "Right Command 4   ...... " # This is a typo and will raise an error if set -e is active
+
+echo "Right Command 5  ...... "
+
+set +x # Deactivate tracing
+
+set +u # Deactivate error on undefined variables
 
 
+################################## Functions ##################################333
+# a. define and call function with arguments
+function name () {
+    echo "Hello from 01_Function_testing.sh" # Function body
+    echo "First argument: $1"
+    echo "Second argument: $2"
+    echo "Number of arguments: $#"
+}
+
+# Call the function with arguments
+name "Shehab aldeen" "Yarab"
+
+#----------------------------------------------------------------------------------------#
+
+# b. Scopes Variables.
+## Global variable
+declare NAME="Terminal Scope"
+echo "Before function call: ${NAME}"
+
+# Function to change the value of NAME
+function changeName(){
+    # Uncomment the following line to see the effect of a local variable
+    # local NAME="Function scope"
+
+    # Changing the global variable NAME
+    NAME="Function scope"
+}
+
+# Call the function
+changeName
+
+# Check the value of NAME after the function call
+echo "After function call: ${NAME}"
+
+#----------------------------------------------------------------------------------------#
+
+# c. Return Values 
+# Function that returns a number
+function returnNumber()
+{   
+    return 10  # Returns 10 as the function's exit status (not as a value)
+}
+
+# Call the function and capture the return status
+returnNumber
+echo "Return status from returnNumber: $?"  # $? captures the exit status (10 in this case)
 
 
+# Function that returns a string
+function returnString()
+{
+    echo "Hello from returnString"  # This is the actual output of the function
+    return 20  # The exit status of the function
+}
 
+# Capture the string returned by returnString
+RET=$(returnString)  # Command substitution to capture the output of the function
+echo "Return status from returnString: $?"  # This captures the exit status (20)
+echo "String returned by returnString: ${RET}"
 
+########################################### Special syntax #################################
 
+# 1. Pipe (|) ---> syntax: command1 | command2
+# Example: Passing the output of one command as input to another. 
+echo "Testing .. " | grep "Test"
+
+# 2. && ---> Syntax: command1 && command2
+# Example: Executes command2 if and only if command1 is successful.
+mkdir testing && cd testing
+
+# 3. || ---> Syntax: command1 || command2
+# Example: Executes command2 if and only if command1 fails.
+cd testing || mkdir testing
+
+# 4. ; ---> Syntax: command1 ; command2 ; command3
+# Example: Runs all commands sequentially, regardless of success or failure.
+echo "Print #1" ; echo "Print #2" ;
 
