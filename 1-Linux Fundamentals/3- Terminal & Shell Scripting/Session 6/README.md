@@ -44,20 +44,22 @@ Because you need to make it as executable using this command `chmod +x path/of/f
 ------------------------------------------------------------------------------------------------------------------
 
 1. Inputs<br />
-  + At first: we will discuss about who could make these inputs (Developer, Script, Service Management).
-  + Secondary: Types of inputs are (local-env-shell).
-  + We can make this inputs by two cases : a. Before run script, b. After run operation "During run-time". We make an example on each case into `01_bash_basics.sh`
-  + 1.a. Before run script (Positional Parameters):-
-using shell input arguments as `$0  ---> name script` `$1  ---> 1st paramater` `$2  ---> 2nd parameter`
+  + At first: we will discuss about who could make these inputs (Developer, Script, Service Management).<br />
+  + Secondary: Types of inputs are (local-env-shell).<br />
+  + We can make this inputs by two cases :<br />
+    a. Before run script, b. After run operation "During run-time".
+    We make an example on each case into `01_bash_basics.sh`
+    + 1.a. Before run script (Positional Parameters):-
+    using shell input arguments as `$0  ---> name script`
+    `$1  ---> 1st paramater`
+    `$2  ---> 2nd parameter`
   
-  + 1.b. After run operation (During run-time):-
-hold input till user enter it using read.
-
+    + 1.b. After run operation (During run-time):-
+    hold input till user enter it using `read`.
 
 ------------------------------------------------------------------------------------------------------------------
 
-
-2. Operations on variables (We make an example on each case into `01_bash_basics.sh`).<br />
+2. Operations on variables (We make an example on each case into `01_bash_basics.sh`.<br />
   + A. On Local Variables
      + a. Declare variable `tldr declare` will show the types of variables that could be declared.
      + b. Assign value variable
