@@ -4,23 +4,26 @@
 ############################### 1. Advanced Variable Operations. ###############################
 NAME="Shehab"
 
-echo "${NAME:-Hazem}"  # variable is empty        ---> NAME="Hazem" (* YOCTO)
-echo "${NAME:=Hazem}"  # variable is not defined  ---> 1. define variable. then 2. set variable = value  (* YOCTO)
-#echo "${NAME2:?Hazem}" # variable is not declared ---> raise error.
+echo "${NAME:-shehab}"  # variable is empty        ---> NAME="shehab" (very important in YOCTO)
+echo "${NAME2:=Hazem}"  # variable is not defined  ---> 1. define variable. then 2. set variable = value  (very important in YOCTO)
+#echo "${NAME3:?Hazem}" # variable is not declared ---> raise error.
 
 
 
 
 ################################ 2. Advanced string Operations. ################################
 # a. check string  ---> empty, declared, string1 = string2 (DONE in previous session)
-##  -n to check if is not empty
+
 unset NAME
 
+##  -n to check if is not empty
 if [ -n "$NAME" ]; then
     echo "NAME is declared and not empty: $NAME"
 else
     echo "NAME is not declared or empty"
 fi
+
+Name=""
 
 ##  -z to check if is empty
 if [ -z "$NAME" ]; then
@@ -33,16 +36,16 @@ fi
 
 # b. Sub-string operation.
 declare string="Hello world"
-echo "${string:  3}"       # cutting operation : cut first 3 chars. Outputs: "lo world"
-echo "${string: -3}"       # cutting operation : get last 3 chars.  Outputs: "rld"
+echo "${string:  3}"       # Cutting operation : cut first 3 chars. Outputs: "lo world"
+echo "${string: -3}"       # Getting operation : get last 3 chars.  Outputs: "rld"
 
 #----------------------------------------------------------------------------------------#
 
 # c. Matching Pattern ---> 
 
 ## Searching pattern inside string.
-declare data="Hello world"
-if [[ "${data}" = *"Wold"* ]]; then
+declare data="Hello Shehab"
+if [[ "${data}" = *"World"* ]]; then
     echo "${data} contains: world"
 else
     echo "Not Contain"
@@ -63,7 +66,7 @@ declare filename="Hello.txt"
 
 #----------------------------------------------------------------------------------------#
 
-## d. Trim
+## d. Trim : be care that spaces between words will discard also.
 declare string="       Hello world  " 
 echo "Before trim: ${string}"
 trimmed=$(echo -e "${string}" | tr -d '[:space:]')
@@ -74,11 +77,13 @@ echo "$trimmed"
 
 # b. Loops 
 ### for
+echo "for loop"
 for i in `seq 10`;do  # we replaced `seq 10` with $(seq 10))
     echo "${i}"
 done
 
 ## while 
+echo "while loop"
 index=1
 end=10
 while [ $index -le $end ]; do
@@ -91,7 +96,7 @@ done
 
 #----------------------------------------------------------------------------------------#
 
-# d. select loop
+# d. select loop (set options to you and ask you to enter some one from it and loop til you enter suitable input)
 select os in "linux" "windows"; do
     if [[ "${os}" == "linux" ]]; then
         echo "Linux operations"
@@ -194,7 +199,7 @@ set +e # Deactivate error handling for demonstration purposes
 
 echo "Right Command 3  ...... "
 
-eco "Right Command 4   ...... " # This is a typo and will raise an error if set -e is active
+display "Right Command 4   ...... " # This is a typo and will raise an error if set -e is active
 
 echo "Right Command 5  ...... "
 
@@ -254,8 +259,9 @@ echo "Return status from returnNumber: $?"  # $? captures the exit status (10 in
 # Function that returns a string
 function returnString()
 {
-    echo "Hello from returnString"  # This is the actual output of the function
-    return 20  # The exit status of the function
+    echo "Hello from return String"  # This is the actual output of the function
+    return 20  # The exit status of the function and exit if see this line
+    # echo "Hello from return String"  # This is the actual output of the function
 }
 
 # Capture the string returned by returnString

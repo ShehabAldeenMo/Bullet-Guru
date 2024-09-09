@@ -1,52 +1,56 @@
 #!/usr/bin/bash
 
 ####################################### 1. Inputs ############################################
-# 1.a
+# We can make this inputs by two cases 
+# 1.a Before run script
 for((i=0;i<4;i++)); do
     echo "${!i}"
 done
 
-
+# access variables
 first_name=$1
 last_name=$2
 echo "Hello, $first_name $last_name!"
 
-#1.b
+# 1.b  After run operation "During run-time"
 echo "Enter your first name and last name:" # Prompt the user for input
 read -r first_name last_name
 
-# Use the input
+# Use the input (access variables)
 echo "Hello, $first_name $last_name!"
 
 echo "-----------------------------------------------------------------------------------"
-
 ####################################### 1. Operations ############################################
-# 2.A.a and 2.A.c          (On Local Variables)
+# 2.A.a and 2.A.c       Declare variable - Access Variable    (On Local Variables)
 declare Name="Shehab Aldeen Mohammed"
 echo "My name : $Name"
 
-# 2.A.b
+# 2.A.b Assign value variable
 declare -i Value=5
 Value=10                  # direct value
 echo "$Value"
 
 
-# 2.A.d
+# 2.A.d Delete Variable
 unset Value
 echo "$Value"
 
 echo "-----------------------------------------------------------------------------------"
+##########################################################################################
 
 # B. Functions 
-declare NAME="hostname"   # Assign value from another command. where hostname is a command call that print your name
+## Assign value from another command. where hostname is a command call that print your name
+declare NAME="hostname"   
 echo ${NAME}
 
-file_list=$(ls)           # specific commands
+## specific commands
+file_list=$(ls)           
 echo "Files in the directory are: $file_list"
 
-pstree                   # command call
+## command call
+pstree                     
 
-# each runing command return status of this call by $?
+## each runing command return status of this call by ($?)
 # which 0 ----> sucess or !0 ----> failed
 if [ $? = 0 ]; then
     echo "Sucess"
@@ -55,7 +59,7 @@ else
 fi
 
 echo "-----------------------------------------------------------------------------------"
-
+##########################################################################################
 # C. arithimitic operations
 a=5      # Declare variables
 b=3      # Declare variables
@@ -74,9 +78,10 @@ echo "Remainder: $remainder"
 
 
 echo "-----------------------------------------------------------------------------------"
+##########################################################################################
 
 # D. Check Conditions
-# D.a Checking if a File Exists
+## D.a Checking if a File Exists
 file="/home/shehabaldeen/Desktop/Linux/Hazem Khaled/Bullet-Guru/1-Linux Fundamentals/3- Terminal & Shell Scripting/Session 6"
 
 if [ -e "$file" ]; then
@@ -137,15 +142,23 @@ case "$day" in
         ;;
 esac
 
-
 ####################################### Env variable.##################################
-# 1. Declare env variable.
+## 1. Declare env variable.
 declare -x ENV_NAME="Name"
-# 2. Assign value variable.
+
+## 2. Assign value variable.
 ENV_NAME="Name1"
-# 3. Access Variable.
+
+## 3. Access Variable.
 echo ${ENV_NAME}
-# 4. Delete Variable.
+
+## 4. Delete Variable.
 unset ENV_NAME
-# 5. Print all ENV system.
+
+## 5. Print all ENV system.
 env 
+
+##########################################################################################
+## clear our screen after testing 
+sleep 8  # Delay for 8 seconds
+clear
