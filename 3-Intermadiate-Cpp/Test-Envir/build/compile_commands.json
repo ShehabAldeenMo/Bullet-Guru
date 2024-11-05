@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/shehabaldeen/Desktop/MyComputer/HazemKhaled/Bullet-Guru/3-Intermadiate-Cpp/Test-Envir/build",
+  "command": "/usr/bin/c++  -I/home/shehabaldeen/Desktop/MyComputer/HazemKhaled/Bullet-Guru/3-Intermadiate-Cpp/Test-Envir/includes -I/home/shehabaldeen/Desktop/MyComputer/HazemKhaled/Bullet-Guru/3-Intermadiate-Cpp/Test-Envir/utils -g -o CMakeFiles/PRINT.dir/src/main.cpp.o -c /home/shehabaldeen/Desktop/MyComputer/HazemKhaled/Bullet-Guru/3-Intermadiate-Cpp/Test-Envir/src/main.cpp",
+  "file": "/home/shehabaldeen/Desktop/MyComputer/HazemKhaled/Bullet-Guru/3-Intermadiate-Cpp/Test-Envir/src/main.cpp"
+}
+]
