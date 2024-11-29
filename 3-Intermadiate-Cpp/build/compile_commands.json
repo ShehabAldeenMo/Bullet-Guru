@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/shehabaldeen/Desktop/MyComputer/HazemKhaled/Bullet-Guru/3-Intermadiate-Cpp/build",
+  "command": "/usr/bin/c++  -I/home/shehabaldeen/Desktop/MyComputer/HazemKhaled/Bullet-Guru/3-Intermadiate-Cpp/includes -I/home/shehabaldeen/Desktop/MyComputer/HazemKhaled/Bullet-Guru/3-Intermadiate-Cpp/utils -g -o CMakeFiles/PRINT.dir/src/main.cpp.o -c /home/shehabaldeen/Desktop/MyComputer/HazemKhaled/Bullet-Guru/3-Intermadiate-Cpp/src/main.cpp",
+  "file": "/home/shehabaldeen/Desktop/MyComputer/HazemKhaled/Bullet-Guru/3-Intermadiate-Cpp/src/main.cpp"
+}
+]
